@@ -23,7 +23,6 @@ return {
 
 	opts = {
 		automatic_enable = true,
-		automatic_installation = true,
 		ensure_installed = {
 			'lua_ls',
 			'astro',

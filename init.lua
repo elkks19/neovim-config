@@ -21,4 +21,4 @@ vim.g.loaded_perl_provider = 0
 -- set colorscheme to rose pine as default
 vim.cmd.colorscheme('rose-pine')
 
-vim.lsp.set_log_level("debug")
+vim.lsp.set_log_level("error")

@@ -18,7 +18,7 @@ return {
 				["<C-n>"] = { "scroll_preview", config = { direction = -10} },
             },
         },
-        close_if_last_window = true,
+        close_if_last_window = false,
   		auto_clean_after_session_restore = true,
 		filesystem = {
 			filtered_items = {

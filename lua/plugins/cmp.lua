@@ -1,19 +1,13 @@
 return {
 	{
-		"folke/lazydev.nvim",
-		ft = "lua",
-		opts = {
-			library = {
-				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
-			},
-		},
-	},
-	{
+		-- enabled = false,
 		'saghen/blink.cmp',
 		version = '1.*',
 		dependencies = {
 			'rafamadriz/friendly-snippets',
 		},
+
+		enabled = false,
 		-- NOTE: BLINK OPTS
 		opts = {
 			keymap = {
@@ -28,7 +22,7 @@ return {
 				['<C-p>'] = { 'scroll_documentation_up', 'fallback' },
 				['<C-n>'] = { 'scroll_documentation_down', 'fallback' },
 
-				['<C-space>'] = { function(cmp) cmp.show({ providers = { 'snippets' } }) end },
+				-- ['<C-space>'] = { function(cmp) cmp.show({ providers = { 'snippets' } }) end },
 			},
 
 			appearance = {
