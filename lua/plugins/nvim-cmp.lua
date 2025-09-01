@@ -63,13 +63,20 @@ return {
 					completeopt = 'menu,menuone,preview,noselect',
 				},
 
+				view = {
+					docs = {
+						auto_open = false,
+					}
+				},
+
 				mapping = cmp.mapping.preset.insert({
 					["<C-j>"] = cmp.mapping.select_next_item({ behavior = 'select' }),
 					["<C-k>"] = cmp.mapping.select_prev_item({ behavior = 'select' }),
 					["<C-e>"] = cmp.mapping.abort(),
 					['<Tab>'] = cmp.mapping.confirm({ select = true }),
-					-- NOTE ?
-					-- ["<C-Space>"] = cmp.mapping.complete(),
+
+					['<C-l>'] = cmp.mapping.open_docs(),
+					['<C-c>'] = cmp.mapping.close_docs(),
 
 					["<C-p>"] = cmp.mapping.scroll_docs(-4),
 					["<C-n>"] = cmp.mapping.scroll_docs(4),
@@ -82,6 +89,7 @@ return {
 					{ name = "path" },
 					{ name = 'emoji' },
 					{ name = "dotenv" },
+					{ name = "lazydev" },
 				}),
 			})
 		end

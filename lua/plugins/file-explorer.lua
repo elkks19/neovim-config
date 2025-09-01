@@ -1,43 +1,53 @@
 return {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-	keys = {
-		{ "<leader>e", "<cmd>Neotree toggle filesystem reveal left<cr>", desc = "Open the file explorer" },
-		{ "<leader>we", "<cmd>Neotree toggle filesystem reveal float<cr>", desc = "Open the file explorer" }
+	{
+		'stevearc/oil.nvim',
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		lazy = false,
+		keys = {
+			{ "<leader>o", "<cmd>Oil --float<cr>", desc = "Opens oil.nvim in the current cwd" }
+		},
+		opts = {},
 	},
-    dependencies = {
-      	"nvim-lua/plenary.nvim",
-      	"MunifTanjim/nui.nvim",
-      	"nvim-tree/nvim-web-devicons",
-    },
-	opts = {
-        window = {
-            mappings = {
-                ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = false }},
-				["<C-p>"] = { "scroll_preview", config = { direction = 10}},
-				["<C-n>"] = { "scroll_preview", config = { direction = -10} },
-            },
-        },
-        close_if_last_window = false,
-  		auto_clean_after_session_restore = true,
-		filesystem = {
-			filtered_items = {
-				visible = false,
-				hide_dotfiles = false,
-            	hide_gitignored = true,
-				hide_by_pattern = {
-					'*/*_templ.go',
-					'*/*_templ.txt',
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		keys = {
+			{ "<leader>e",  "<cmd>Neotree toggle filesystem reveal left<cr>",  desc = "Open the file explorer" },
+			{ "<leader>we", "<cmd>Neotree toggle filesystem reveal float<cr>", desc = "Open the file explorer" }
+		},
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+		opts = {
+			window = {
+				mappings = {
+					["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = false } },
+					["<C-p>"] = { "scroll_preview", config = { direction = 10 } },
+					["<C-n>"] = { "scroll_preview", config = { direction = -10 } },
 				},
-				always_show = {
-				  	".gitignored",
-					".env",
+			},
+			close_if_last_window = false,
+			auto_clean_after_session_restore = true,
+			filesystem = {
+				filtered_items = {
+					visible = false,
+					hide_dotfiles = false,
+					hide_gitignored = true,
+					hide_by_pattern = {
+						'*/*_templ.go',
+						'*/*_templ.txt',
+					},
+					always_show = {
+						".gitignored",
+						".env",
+					},
+					always_show_by_pattern = {
+						"*.env",
+					},
 				},
-				always_show_by_pattern = {
-					"*.env",
-				},
-          	},
+			},
 		},
 	},
 }
-

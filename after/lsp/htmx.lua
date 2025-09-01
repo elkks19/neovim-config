@@ -1,11 +1,3 @@
 return {
-  	filetypes = {
-		'astro',
-		'html',
-		'templ',
-		'javascriptreact',
-		'typescriptreact',
-		'svelte',
-		'vue',
-	},
+  	cmd = { 'htmx-lsp', '--level', 'OFF' }, -- o 'ERROR'
 }
