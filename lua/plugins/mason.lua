@@ -35,7 +35,6 @@ return {
 			'html',
 			'htmx',
 			'jsonls',
-			'postgres_lsp',
 			'tailwindcss',
 			'templ',
 			'vimls',

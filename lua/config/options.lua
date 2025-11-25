@@ -27,3 +27,4 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 
 vim.opt.iskeyword:append { "-" }
+
