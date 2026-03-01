@@ -21,12 +21,8 @@ return {
 						if args.match == 'LazyRestore' then
 							require('lazy').load({ plugins = { 'nvim-platformio.lua' } })
 						elseif args.match == 'LazyLoad' then
-							local config = {
-								lsp = 'clangd',
-								menu_key = '<leader>\\', -- replace this menu key  to your convenience
-							}
 							vim.notify('PlatformIO loaded', vim.log.levels.INFO, { title = 'PlatformIO' })
-							require("platformio").setup(config)
+							require("platformio").setup(vim.g.pioConfig)
 							vim.cmd('Pioinit')
 						end
 					end,

@@ -44,7 +44,7 @@ return {
 						".env",
 					},
 					always_show_by_pattern = {
-						"*.env",
+						"*.env*",
 					},
 				},
 			},

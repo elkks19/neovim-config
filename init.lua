@@ -5,9 +5,9 @@ require("config.keybinds")
 
 -- register the templ filetype
 vim.filetype.add({
-    extension = {
-        templ = "templ",
-    },
+	extension = {
+		templ = "templ",
+	},
 })
 
 -- plugin that lets me edit sudo accesible files
@@ -22,3 +22,14 @@ vim.g.loaded_perl_provider = 0
 vim.cmd.colorscheme('rose-pine')
 
 vim.lsp.set_log_level("error")
+
+vim.opt['number'] = true
+
+vim.g.pioConfig ={
+    lsp = 'clangd',
+	debug = true,
+	clangd_source = 'compiledb',
+}
+
+local pok, platformio = pcall(require, 'platformio')
+if pok then platformio.setup(vim.g.pioConfig) end

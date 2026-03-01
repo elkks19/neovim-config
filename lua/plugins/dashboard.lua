@@ -13,6 +13,15 @@ return{
 		scroll = { enabled = false },
 		statuscolumn = { enabled = false },
 		words = { enabled = false },
+		image = {
+			enabled = true,
+			doc = {
+				float = true,
+				inline = false,
+				max_width = 30,
+				max_height = 30,
+			}
+		},
 		dashboard = {
 			preset = {
 				keys = {
@@ -21,6 +30,7 @@ return{
 					{ icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
 					{ icon = " ", key = "g", desc = "Find Text", action = "<leader>fs" },
 					{ icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
+					{ icon = "M ", key = "m", desc = "Mason", action = ":Mason"},
 					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 				},
     			header = require('config.headers').random_header(),

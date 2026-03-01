@@ -1,5 +1,11 @@
 return {
 	{
+		'saghen/blink.compat',
+		version = '2.*',
+		lazy = true,
+		opts = {},
+	},
+	{
 		-- enabled = false,
 		'saghen/blink.cmp',
 		version = '1.*',
@@ -59,7 +65,14 @@ return {
 						friendly_snippets = true,
 						clipboard_register = '+',
 					}
-				}
+				},
+
+				laravel = {
+					name = "laravel",
+					module = "blink.compat.source",
+					score_offset = 95, -- show at a higher priority than lsp
+				},
+
 			},
 
 			fuzzy = { implementation = "prefer_rust_with_warning" },

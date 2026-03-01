@@ -1,6 +1,5 @@
 return {
 	"davidmh/mdx.nvim",
-	config = true,
-	laxy = false,
+	lazy = false,
 	dependencies = { "nvim-treesitter/nvim-treesitter" }
 }

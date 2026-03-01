@@ -39,6 +39,7 @@ return {
 			'templ',
 			'vimls',
 			'svelte',
+			'intelephense',
 		},
 	},
 }
