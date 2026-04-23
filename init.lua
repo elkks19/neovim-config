@@ -3,6 +3,11 @@ require("config.options")
 require("config.lsp")
 require("config.keybinds")
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { '<filetype>' },
+  callback = function() vim.treesitter.start() end,
+})
+
 -- register the templ filetype
 vim.filetype.add({
 	extension = {
@@ -19,9 +24,7 @@ vim.g.python3_host_prog = '/usr/bin/python'
 vim.g.loaded_perl_provider = 0
 
 -- set colorscheme to rose pine as default
-vim.cmd.colorscheme('rose-pine')
-
-vim.lsp.set_log_level("error")
+vim.cmd.colorscheme('catppuccin-mocha')
 
 vim.opt['number'] = true
 
@@ -33,3 +36,7 @@ vim.g.pioConfig ={
 
 local pok, platformio = pcall(require, 'platformio')
 if pok then platformio.setup(vim.g.pioConfig) end
+
+vim.lsp.config('*', {
+  capabilities = require('blink.cmp').get_lsp_capabilities(),
+})

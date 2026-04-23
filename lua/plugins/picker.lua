@@ -1,7 +1,7 @@
 return {
 	'echasnovski/mini.pick',
 	version = '*',
-  	cmd = { 'Pick' },
+	cmd = { 'Pick' },
 	keys = {
 		-- TODO: HACER EL PICKER PARA LAS COMMITS DE GIT Y ABRRILO EN NEOTREE
 		-- https://github.com/nvim-neo-tree/neo-tree.nvim
@@ -44,21 +44,21 @@ return {
 			end,
 			desc = "search for files including gitignored and hidden files"
 		},
-		{ "<leader>ff", "<cmd>Pick files<cr>", desc = "search for files" },
-		{ "<leader>fs", "<cmd>Pick grep_live<cr>", desc = "search for content in files" },
-		{ "<leader>fb", "<cmd>Pick buffers<cr>", desc = "search for buffers" },
-		{ "<leader>he", "<cmd>Pick help<cr>", desc = "search for a help page" },
-		{ "<leader>hi", "<cmd>Pick history<cr>", desc = "search for a command in history" },
-		{ "<leader>fd", "<cmd>Pick diagnostic<cr>", desc = "search for lsp diagnostics" },
-		{ "<leader>fc", "<cmd>Pick command<cr>", desc = "search for commands" },
-		{ "<leader>fe", "<cmd>Pick explorer<cr>", desc = "file explorer in pick" },
-		{ "<leader>ft", "<cmd>Pick hipatterns<cr>", desc = "search for hipatterns" },
+		{ "<leader>ff", "<cmd>Pick files<cr>",        desc = "search for files" },
+		{ "<leader>fs", "<cmd>Pick grep_live<cr>",    desc = "search for content in files" },
+		{ "<leader>fb", "<cmd>Pick buffers<cr>",      desc = "search for buffers" },
+		{ "<leader>he", "<cmd>Pick help<cr>",         desc = "search for a help page" },
+		{ "<leader>hi", "<cmd>Pick history<cr>",      desc = "search for a command in history" },
+		{ "<leader>fd", "<cmd>Pick diagnostic<cr>",   desc = "search for lsp diagnostics" },
+		{ "<leader>fc", "<cmd>Pick command<cr>",      desc = "search for commands" },
+		{ "<leader>fe", "<cmd>Pick explorer<cr>",     desc = "file explorer in pick" },
+		{ "<leader>ft", "<cmd>Pick hipatterns<cr>",   desc = "search for hipatterns" },
 		{ "<leader>gb", "<cmd>Pick git_branches<cr>", desc = "select git branches" },
 	},
-	opts ={
+	opts = {
 		mappings = {
-			caret_left  = '<Left>',
-			caret_right = '<Right>',
+			caret_left        = '<Left>',
+			caret_right       = '<Right>',
 
 			choose            = '<CR>',
 			choose_in_split   = '<C-h>',
@@ -71,27 +71,27 @@ return {
 			delete_left       = '<C-S-BS>',
 			delete_word       = '<C-BS>',
 
-			mark     = '<C-x>',
-			mark_all = '<C-a>',
+			mark              = '<C-x>',
+			mark_all          = '<C-a>',
 
-			move_down  = '<C-j>',
-			move_start = '<C-g>',
-			move_up    = '<C-k>',
+			move_down         = '<C-j>',
+			move_start        = '<C-g>',
+			move_up           = '<C-k>',
 
-			paste = '<C-r>',
+			paste             = '<C-r>',
 
-			refine        = '<C-Space>',
-			refine_marked = '<M-Space>',
+			refine            = '<C-Space>',
+			refine_marked     = '<M-Space>',
 
-			scroll_down  = '<C-e>',
-			scroll_left  = '<C-h>',
-			scroll_right = '<C-l>',
-			scroll_up    = '<C-y>',
+			scroll_down       = '<C-e>',
+			scroll_left       = '<C-h>',
+			scroll_right      = '<C-l>',
+			scroll_up         = '<C-y>',
 
-			stop = '<C-c>',
+			stop              = '<C-c>',
 
-			toggle_info    = '<S-Tab>',
-			toggle_preview = '<Tab>',
+			toggle_info       = '<S-Tab>',
+			toggle_preview    = '<Tab>',
 		},
 	}
 }

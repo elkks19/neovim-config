@@ -5,5 +5,6 @@ return {
 	filetypes = {
 		'blade',
 		'typescriptreact',
+		'templ',
 	}
 }
