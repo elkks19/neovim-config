@@ -57,6 +57,13 @@ return {
 	},
 	opts = {
 		mappings = {
+			choose_all        = {
+				char = '<C-q>',
+				func = function()
+					local mappings = MiniPick.get_picker_opts().mappings
+					vim.api.nvim_input(mappings.mark_all .. mappings.choose_marked)
+				end
+			},
 			caret_left        = '<Left>',
 			caret_right       = '<Right>',
 
@@ -83,10 +90,10 @@ return {
 			refine            = '<C-Space>',
 			refine_marked     = '<M-Space>',
 
-			scroll_down       = '<C-e>',
-			scroll_left       = '<C-h>',
-			scroll_right      = '<C-l>',
-			scroll_up         = '<C-y>',
+			scroll_down       = '<C-A-j>',
+			scroll_left       = '<C-A-h>',
+			scroll_right      = '<C-A-l>',
+			scroll_up         = '<C-A-k>',
 
 			stop              = '<C-c>',
 

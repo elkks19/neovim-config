@@ -45,8 +45,8 @@ return {
 			"gf",
 			function()
 				local ok, res = pcall(function()
-					if Laravel.app("gf").cursorOnResource() then
-						return "<cmd>lua Laravel.commands.run('gf')<cr>"
+					if Laravel.app("gf").cursor_on_resource() then
+						return "<cmd>Laravel gf<cr>"
 					end
 				end)
 				if not ok or not res then

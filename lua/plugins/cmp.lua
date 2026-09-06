@@ -64,11 +64,12 @@ return {
 				default = { "lsp", "path", "snippets", "buffer" },
 
 				per_filetype = {
-					lua = { inherit_defaults = true, "lazydev" },
-					html = { inherit_defaults = true, "datastar" },
-					templ = { inherit_defaults = true, "datastar" },
-					php = { inherit_defaults = true, "laravel" },
-					blade = { inherit_defaults = true, "laravel" },
+					sql = { "dadbod", inherit_defaults = true },
+					lua = { "lazydev", inherit_defaults = true },
+					html = { "datastar", inherit_defaults = true },
+					templ = { "datastar", inherit_defaults = true },
+					php = { "laravel", inherit_defaults = true },
+					blade = { "laravel", inherit_defaults = true },
 				},
 
 				providers = {

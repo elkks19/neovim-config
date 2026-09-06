@@ -1,5 +1,7 @@
 return {
 	"WillEhrendreich/datastar.nvim",
 	ft = { "html", "templ" },
-	opts = true,
+	opts = {
+		goto_definition = false,
+	},
 }

@@ -3,21 +3,26 @@ return {
 	event = { 'BufReadPre', 'InsertEnter' },
 	dependencies = {
 		{
-			'neovim/nvim-lspconfig',
-			event = { "VeryLazy" },
-		},
-		{
 			'mason-org/mason.nvim',
 			cmd = 'Mason',
 			opts = {
 				ui = {
-					icons = {
-						package_installed = '',
-						package_pending = '',
-						package_uninstalled = '',
-					}
-				}
+					-- icons = {
+					-- 	package_installed = '',
+					-- 	package_pending = '',
+					-- 	package_uninstalled = '',
+					-- }
+				},
+
+				registries = {
+					"github:mason-org/mason-registry",
+					"github:Crashdummyy/mason-registry",
+				},
 			}
+		},
+		{
+			'neovim/nvim-lspconfig',
+			event = { "VeryLazy" },
 		},
 	},
 
@@ -36,7 +41,7 @@ return {
 			'vimls',
 			'svelte',
 			'vtsls',
-			'intelephense',
+			-- 'ts_ls',
 		},
 	},
 }
